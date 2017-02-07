@@ -92,7 +92,7 @@
      int32 sendLength = 3;
  }
 
- //http请求===============
+ //http request===============
  message HttpServerResponse {
      int32 code = 1;
      string message=2;
@@ -729,18 +729,18 @@
 
 
  message Transaction {
-     string hash = 1; //TXID
-     uint64 block_height = 2; //块高度
-     uint64 created_at = 3; //交易发生时间
-     uint64 fee = 4; //手续费
-     uint64 inputs_value = 5; //
-     string category = 6; //交易类型
-     int64 balance = 7; // 交易金额
+     string hash = 1;
+     uint64 block_height = 2;
+     uint64 created_at = 3;
+     uint64 fee = 4;
+     uint64 inputs_value = 5;
+     string category = 6;
+     int64 balance = 7;
      repeated UserInfoBalance userInfos = 8;
-     repeated Input inputs = 9; // 总输入
-     repeated Output outputs = 10; //总输出
-     uint64 confirmations=11;//确认数
-     int32 tx_type = 12;//交易类型红包,转账...
+     repeated Input inputs = 9;
+     repeated Output outputs = 10;
+     uint64 confirmations=11;
+     int32 tx_type = 12;
  }
 
  message AddressInfo {
