@@ -18,7 +18,7 @@
 
  message SystemRedPackage {
      int64 amount = 1;
-     string txId = 2;
+     string hashId = 2;
      string tips = 3;
  }
 
@@ -435,6 +435,7 @@
      int32 change_type=2;
      bytes detail=3;
      int32 count = 4;
+     UserInfo invite_by=5;
  }
 
  message QuitGroupUserAddress {
@@ -849,6 +850,7 @@
      int64 deadline = 14;
      int32 typ = 15;
      int64 created_at=16;
+     bool  system = 17;
  }
 
  message RedPackageInfo {
@@ -910,8 +912,8 @@
      int64 count = 2;
  }
  message UserCrowdfundingInfo {
-     int32 pageSize = 2;
-     int32 pageIndex = 3;
+     int32 pageSize = 1;
+     int32 pageIndex = 2;
  }
 
  message CrowdfundingInfo {
@@ -1036,6 +1038,7 @@
      UserInfo sender = 2;
      string tips = 3;
      string msg_id = 4;
+     bool system = 5;
  }
  message UnspentOrder {
      int64 amount =1;
