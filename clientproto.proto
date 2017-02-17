@@ -296,6 +296,16 @@
  }
 
  //group chat===============
+ message GroupToken {
+     string token = 1;
+ }
+ message GroupScan {
+     string identifier = 1;
+     string hash = 2;
+ }
+ message GroupUrl {
+     string url = 1;
+ }
  message Group {
      string identifier = 1;
      string name=2;
@@ -354,6 +364,17 @@
      string name =3;
      int32 count =4;
      string hash =5;
+     bool   public=6;
+ }
+ message GroupInfoBaseShare {
+     string avatar=1;
+     string summary=2;
+     string name =3;
+     int32 count =4;
+     string hash =5;
+     bool   public=6;
+     string username = 7;
+     string identifier = 8;
  }
  message GroupInfo {
      Group group=1;
