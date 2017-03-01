@@ -296,6 +296,27 @@
  }
 
  //group chat===============
+ message GroupApplyMessage{
+ bytes apply_data=1;
+     string message_id=2;
+ }
+ message GroupInvite {
+     string inviteBy = 1;
+     string identifier = 2;
+     string tips=3;
+     string token=4;
+ }
+ message GroupInviteUser {
+ repeated string addresses = 1;
+     string identifier=2;
+ }
+ message GroupInviteResponse {
+    string address = 1;
+ string token = 2;
+ }
+ message GroupInviteResponseList {
+    repeated GroupInviteResponse list = 1;
+ }
  message GroupToken {
      string token = 1;
  }
@@ -982,8 +1003,18 @@
      int32 status = 2;
      string sender = 3;
      string receiver = 4;
+     uint64 amount =5;
+     string groupId=6;
  }
-
+ message CrowdfundingNotice {
+     string hashId = 1;
+     int32 status = 2;
+     string sender = 3;
+     string receiver = 4;
+     uint64 amount = 5;
+     string groupId = 6;
+     Crowdfunding crowdfunding = 7;
+ }
  message OrdinaryBilling {
      string hash_id = 1;
      uint64 money = 2;
@@ -1085,4 +1116,7 @@
  message SyncBadge {
      int32 badge=1;
  }
-
+ message AppInfo {
+     string version = 1;
+     string platform = 2;
+ }
