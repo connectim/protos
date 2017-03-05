@@ -613,6 +613,7 @@
      bool force = 4;
      int32  platform =5;
      string remark = 6;
+     string upgrade_url=7;
  }
 
  //relationship ===============
